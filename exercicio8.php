@@ -20,17 +20,16 @@ O algoritmo deverá solicitar o valor da cotação do dólar e também a quantid
 
 <?php
     if (isset($_POST['enviar'])) {
-        $Celsius = $_POST['n1'];
-        $Celsius = $_POST['n1'];
+        $Cotação = $_POST['n1'];
+        $Quantidade = $_POST['n2'];
 
         // Cálculos
-        $Fahrenheit = $Celsius * 1.8 + 32;
+        $Conversão = $Cotação * $Quantidade;
         
 
         echo "<h3>Resultado da conversão: </h3>";
         echo "<table>
-                <tr><td>Temperatura em Celsius:</td><td>$Celsius °C</td></tr>
-                <tr><td>Temperatura em Fahrenheit:</td><td>$Fahrenheit °F</td></tr>
+                <tr><td>Dólar para Real:</td><td>$Conversão reais</td></tr>
               </table>";
     }
     ?>
