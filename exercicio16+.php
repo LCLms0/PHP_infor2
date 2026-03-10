@@ -20,7 +20,7 @@ if ($media >= 7) {
 
 
 <?php
-$numeros = [5, 12, 50, 150, 200, 10, 80]; // Simulação de entrada
+$numeros = [5, 12, 50, 150, 200, 10, 80];
 $totalNoIntervalo = 0;
 
 foreach ($numeros as $n) {
@@ -34,7 +34,7 @@ echo "Quantidade de números no intervalo [10, 150]: $totalNoIntervalo";
 <!-- Q18 -->
 
 <?php
-$idades = [15, 22, 18, 12, 40]; // Simulação de idades
+$idades = [15, 22, 18, 12, 40]; 
 foreach ($idades as $indice => $idade) {
     $status = ($idade >= 18) ? "maior de idade" : "menor de idade";
     echo "Pessoa " . ($indice + 1) . ": $status ($idade anos)\n";
@@ -92,7 +92,6 @@ $pessoas = [
 $aptos = 0; $inaptos = 0;
 
 foreach ($pessoas as $p) {
-    // Critério hipotético: Homem, >= 18 anos e saúde boa
     if ($p['sexo'] == "M" && $p['idade'] >= 18 && $p['saude'] == "boa") {
         echo $p['nome'] . " está APTO.\n";
         $aptos++;
@@ -108,9 +107,9 @@ echo "Total Aptos: $aptos | Total Inaptos: $inaptos\n";
 
 <?php
 $produtos = [
-    ["custo" => 50, "venda" => 70], // Lucro
-    ["custo" => 100, "venda" => 80], // Prejuízo
-    ["custo" => 30, "venda" => 30]  // Empate
+    ["custo" => 50, "venda" => 70], 
+    ["custo" => 100, "venda" => 80],
+    ["custo" => 30, "venda" => 30]  
 ];
 
 $somaCusto = 0; $somaVenda = 0;
@@ -179,7 +178,7 @@ switch ($num) {
 $veiculos = [
     ["valor" => 30000, "combustivel" => "gasolina"],
     ["valor" => 25000, "combustivel" => "álcool"],
-    ["valor" => 0, "combustivel" => "diesel"] // Encerra
+    ["valor" => 0, "combustivel" => "diesel"]
 ];
 
 $totalDesconto = 0; $totalPago = 0;
@@ -233,7 +232,6 @@ switch ($mes) {
     case 3: echo "Março"; break;
     case 4: echo "Abril"; break;
     case 5: echo "Maio"; break;
-    // ... continuar até 12
     default: echo "Mês inválido";
 }
 ?>
@@ -261,7 +259,7 @@ echo "Nome: $nome | Salário Líquido: R$ " . number_format($salarioLiquido, 2);
 
 <?php
 $valores = [30, 10, 20];
-sort($valores); // Função nativa que ordena o array
+sort($valores); 
 echo "Valores em ordem crescente: " . implode(", ", $valores);
 ?>
 
@@ -285,7 +283,6 @@ elseif ($C == '/') {
 <?php
 $a = 10; $b = 10; $c = 10;
 
-// Propriedade: cada lado deve ser menor que a soma dos outros dois
 if ($a < ($b + $c) && $b < ($a + $c) && $c < ($a + $b)) {
     if ($a == $b && $b == $c) echo "Triângulo Equilátero";
     elseif ($a == $b || $a == $c || $b == $c) echo "Triângulo Isóscele";
@@ -298,7 +295,7 @@ if ($a < ($b + $c) && $b < ($a + $c) && $c < ($a + $b)) {
 <!-- Q34 -->
 
 <?php
-$nivel = 2; // Níveis 1, 2 ou 3
+$nivel = 2;
 $horasAula = 40;
 $valorHora = 0;
 
@@ -325,7 +322,7 @@ else echo "Idade fora da faixa etária";
 <!-- Q36 -->
 
 <?php
-$tipoCliente = 1; // 1, 2 ou 3
+$tipoCliente = 1;
 $consumoKWh = 150;
 $valorKWh = 0;
 
@@ -352,7 +349,7 @@ if ($sexo == "Masculino") {
     } else {
         $pesoIdeal = ($idade <= 40) ? (72.7 * $h) - 50 : (72.7 * $h) - 58;
     }
-} else { // Feminino
+} else { 
     if ($h > 1.50) $pesoIdeal = (62.1 * $h) - 44.7;
     elseif ($idade >= 35) $pesoIdeal = (62.1 * $h) - 45;
     else $pesoIdeal = (62.1 * $h) - 49;
@@ -381,7 +378,7 @@ echo "Estudante: $nome | Nota Final: $notaFinal | Classificação: $classe";
 <!-- Q40 -->
 
 <?php
-$nome = "Mariana"; $idade = 22; $risco = "Médio"; // Baixo, Médio, Alto
+$nome = "Mariana"; $idade = 22; $risco = "Médio";
 $categoria = "Inválida";
 
 if ($idade < 17 || $idade > 70) {
@@ -396,7 +393,6 @@ if ($idade < 17 || $idade > 70) {
         elseif ($risco == "Médio") $categoria = 3;
         else $categoria = 4;
     }
-    // ... segue a lógica para as outras faixas da tabela [cite: 116]
     echo "Nome: $nome | Idade: $idade | Categoria: $categoria";
 }
 ?>
