@@ -17,16 +17,14 @@
     <hr>
 
     <?php
-    // Verifica se o formulário foi enviado via método POST
     if (isset($_POST['calcular'])) {
-        // Captura os valores do formulário usando as chaves do atributo 'name'
+     
         $num1 = $_POST['n1'];
         $num2 = $_POST['n2'];
 
-        // Realiza o cálculo
         $soma = $num1 + $num2;
 
-        // Exibe o resultado
+
         echo "<h3>Resultado: $num1 + $num2 = <strong>$soma</strong></h3>";
     }
     ?>
