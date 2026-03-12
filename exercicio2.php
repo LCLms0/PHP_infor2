@@ -21,12 +21,11 @@
         $n1 = $_POST['n1'];
         $n2 = $_POST['n2'];
 
-        // Cálculos
+        
         $soma          = $n1 + $n2;
         $subtracao     = $n1 - $n2;
         $multiplicacao = $n1 * $n2;
         
-        // Verificação para divisão por zero
         $divisao = ($n2 != 0) ? ($n1 / $n2) : "Erro (Divisão por zero)";
 
         echo "<h3>Resultados para $n1 e $n2:</h3>";
